@@ -4,6 +4,7 @@ import com.sonda.apichamados.exceptions.ObjetoNaoEncontradoException;
 import com.sonda.apichamados.model.User;
 import com.sonda.apichamados.repository.UserRepository;
 import com.sonda.apichamados.util.BaseService;
+import org.bson.types.ObjectId;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -30,7 +31,7 @@ public class UserService implements BaseService<User> {
     @Override
     public void excluir(String id) {
         verificarExistencia(id);
-        userRepository.deleteById(id);
+        userRepository.deleteById(new ObjectId(id));
     }
 
     @Override
@@ -40,8 +41,10 @@ public class UserService implements BaseService<User> {
 
     @Override
     public User selecionar(String id) {
+        ObjectId oid = new ObjectId(id);
+        System.out.println(oid);
         verificarExistencia(id);
-        User user = userRepository.findById(id).orElse(null);
+        User user = userRepository.findById(oid).orElse(null);
         return user;
     }
 
@@ -54,7 +57,7 @@ public class UserService implements BaseService<User> {
 
     @Override
     public void verificarExistencia(String id) {
-        User user = userRepository.findById(id).orElse(null);
+        User user = userRepository.findById(new ObjectId(id)).orElse(null);
         verificarExistencia(user);
     }
 }

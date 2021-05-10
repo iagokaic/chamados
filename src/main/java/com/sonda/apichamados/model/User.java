@@ -8,6 +8,7 @@ import org.springframework.data.mongodb.core.mapping.MongoId;
 import javax.persistence.Entity;
 import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
+import javax.persistence.Id;
 import javax.validation.constraints.NotBlank;
 
 @Entity
@@ -15,6 +16,7 @@ import javax.validation.constraints.NotBlank;
 @Setter
 public class User {
 
+    @Id
     @MongoId
     private String id;
 
