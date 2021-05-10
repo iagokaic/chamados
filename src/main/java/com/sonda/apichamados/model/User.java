@@ -1,6 +1,6 @@
-package com.sonda.demo.model;
+package com.sonda.apichamados.model;
 
-import com.sonda.demo.enums.Cargo;
+import com.sonda.apichamados.enums.Cargo;
 import lombok.Getter;
 import lombok.Setter;
 import org.springframework.data.mongodb.core.mapping.MongoId;

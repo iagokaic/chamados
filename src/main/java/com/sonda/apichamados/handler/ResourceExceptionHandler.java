@@ -1,7 +1,7 @@
-package com.sonda.demo.handler;
+package com.sonda.apichamados.handler;
 
-import com.sonda.demo.exceptions.ObjetoNaoEncontradoException;
-import com.sonda.demo.model.Erro;
+import com.sonda.apichamados.exceptions.ObjetoNaoEncontradoException;
+import com.sonda.apichamados.model.Erro;
 import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.MethodArgumentNotValidException;

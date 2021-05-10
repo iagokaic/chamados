@@ -1,4 +1,4 @@
-package com.sonda.demo.enums;
+package com.sonda.apichamados.enums;
 
 public enum Cargo {
     N1("SERVICEDESK"),

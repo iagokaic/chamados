@@ -9,7 +9,7 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.sonda</groupId>
-	<artifactId>demo</artifactId>
+	<artifactId>APIChamados</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>chamados</name>
 	<description>Demo project for Spring Boot</description>

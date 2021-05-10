@@ -1,4 +1,4 @@
-package com.sonda.demo;
+package com.sonda.apichamados;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

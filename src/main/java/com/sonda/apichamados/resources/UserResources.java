@@ -1,10 +1,9 @@
-package com.sonda.demo.resources;
+package com.sonda.apichamados.resources;
 
-import com.sonda.demo.model.dto.UserDto;
-import com.sonda.demo.model.dto.UserRetornoDto;
-import com.sonda.demo.util.BaseResource;
+import com.sonda.apichamados.model.dto.UserDto;
+import com.sonda.apichamados.model.dto.UserRetornoDto;
+import com.sonda.apichamados.util.BaseResource;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.util.UriComponentsBuilder;

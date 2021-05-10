@@ -1,7 +1,7 @@
-package com.sonda.demo.services;
+package com.sonda.apichamados.services;
 
-import com.sonda.demo.model.User;
-import com.sonda.demo.util.BaseService;
+import com.sonda.apichamados.model.User;
+import com.sonda.apichamados.util.BaseService;
 import org.springframework.stereotype.Service;
 
 import java.util.List;

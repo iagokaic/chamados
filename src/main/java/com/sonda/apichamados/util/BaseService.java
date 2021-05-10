@@ -1,4 +1,4 @@
-package com.sonda.demo.util;
+package com.sonda.apichamados.util;
 
 import java.util.List;
 

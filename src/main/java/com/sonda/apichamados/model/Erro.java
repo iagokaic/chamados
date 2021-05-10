@@ -1,4 +1,4 @@
-package com.sonda.demo.model;
+package com.sonda.apichamados.model;
 
 import lombok.Getter;
 import lombok.Setter;

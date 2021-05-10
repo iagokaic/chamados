@@ -1,4 +1,4 @@
-package com.sonda.demo.exceptions;
+package com.sonda.apichamados.exceptions;
 
 public class ObjetoNaoEncontradoException extends RuntimeException {
     private static final long serialVersionUID = 1L;

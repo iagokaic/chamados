@@ -1,4 +1,4 @@
-package com.sonda.demo;
+package com.sonda.apichamados;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
