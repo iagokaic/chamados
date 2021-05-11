@@ -26,8 +26,8 @@ public class UserResources implements BaseResource<UserDto, UserRetornoDto> {
     @Transactional
     @PostMapping
     @Override
-    public ResponseEntity<UserRetornoDto> inserir(@Valid @RequestBody UserDto obj, UriComponentsBuilder uriBuilder) {
-        User user = userService.inserir(obj.converter());
+    public ResponseEntity<UserRetornoDto> inserir(@Valid @RequestBody UserDto body, UriComponentsBuilder uriBuilder) {
+        User user = userService.inserir(body.converter());
         URI uri = uriBuilder.path("/users/{id}").buildAndExpand(user.getId()).toUri();
         return ResponseEntity.created(uri).body(new UserRetornoDto(user));
     }
@@ -35,8 +35,8 @@ public class UserResources implements BaseResource<UserDto, UserRetornoDto> {
     @Transactional
     @PutMapping(value = "/{id}")
     @Override
-    public ResponseEntity<UserRetornoDto> alterar(@PathVariable("id") String id, @Valid @RequestBody UserDto obj, UriComponentsBuilder uriBuilder) {
-        User user = userService.alterar(id, obj.converter());
+    public ResponseEntity<UserRetornoDto> alterar(@PathVariable("id") String id, @Valid @RequestBody UserDto body, UriComponentsBuilder uriBuilder) {
+        User user = userService.alterar(id, body.converter());
         URI uri = uriBuilder.path("/users/{id}").buildAndExpand(user.getId()).toUri();
         return ResponseEntity.created(uri).body(new UserRetornoDto(user));
     }
