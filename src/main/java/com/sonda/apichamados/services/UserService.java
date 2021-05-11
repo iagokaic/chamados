@@ -41,10 +41,8 @@ public class UserService implements BaseService<User> {
 
     @Override
     public User selecionar(String id) {
-        ObjectId oid = new ObjectId(id);
-        System.out.println(oid);
         verificarExistencia(id);
-        User user = userRepository.findById(oid).orElse(null);
+        User user = userRepository.findById(new ObjectId(id)).orElse(null);
         return user;
     }
 

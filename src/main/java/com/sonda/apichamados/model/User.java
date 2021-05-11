@@ -3,21 +3,19 @@ package com.sonda.apichamados.model;
 import com.sonda.apichamados.enums.Cargo;
 import lombok.Getter;
 import lombok.Setter;
+import org.springframework.data.mongodb.core.mapping.Document;
 import org.springframework.data.mongodb.core.mapping.MongoId;
 
-import javax.persistence.Entity;
-import javax.persistence.EnumType;
-import javax.persistence.Enumerated;
-import javax.persistence.Id;
+import javax.persistence.*;
 import javax.validation.constraints.NotBlank;
 
 @Entity
 @Getter
 @Setter
+@Document(collection = "users")
 public class User {
 
     @Id
-    @MongoId
     private String id;
 
     @NotBlank(message = "O campo nome não pode ser vazio")
