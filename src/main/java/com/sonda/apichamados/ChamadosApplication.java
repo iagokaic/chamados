@@ -1,5 +1,6 @@
 package com.sonda.apichamados;
 
+import com.sonda.apichamados.repository.ChamadoRepository;
 import com.sonda.apichamados.repository.UserRepository;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -8,9 +9,9 @@ import org.springframework.context.annotation.FilterType;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 import org.springframework.data.mongodb.repository.config.EnableMongoRepositories;
 
-@EnableMongoRepositories(basePackageClasses = UserRepository.class)
+@EnableMongoRepositories(basePackageClasses = {UserRepository.class, ChamadoRepository.class})
 @EnableJpaRepositories(excludeFilters =
-@ComponentScan.Filter(type = FilterType.ASSIGNABLE_TYPE, value = UserRepository.class))
+@ComponentScan.Filter(type = FilterType.ASSIGNABLE_TYPE, value = {UserRepository.class, ChamadoRepository.class}))
 @SpringBootApplication
 public class ChamadosApplication {
 
